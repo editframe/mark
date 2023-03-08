@@ -1,0 +1,44 @@
+{
+  "name": "mark",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "description": "lightweight ffmpeg benchmarking tool for server environments",
+  "scripts": {
+    "build": "tsup",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "prepublishOnly": "bun run build",
+    "test": "bun test"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "benchmark",
+    "bun",
+    "ffmpeg",
+    "mark"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/editframe/mark",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/editframe/mark.git"
+  },
+  "bugs": "https://github.com/editframe/mark/issues",
+  "author": "Bryce Jackson <bryce@editframe.com>",
+  "devDependencies": {
+    "bumpp": "^9.0.0",
+    "bun-types": "^0.5.7",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
