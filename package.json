@@ -40,5 +40,8 @@
     "bun-types": "^0.5.7",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "bun-promptx": "^0.1.9"
   }
 }
